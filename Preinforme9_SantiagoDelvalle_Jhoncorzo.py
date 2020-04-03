@@ -1,12 +1,12 @@
-import math
+Numero=int(input("Digite un número de 4 cifras"))  
 
-x1=int(input("Digite una coordenada x1 positiva"))
-x2=int(input("Digite una coordenada x2 positiva"))
-y1=int(input("Digite una coordenada y1 positiva"))
-y2=int(input("Digite una coordenada y2 positiva"))
+if Numero >= 1000 and Numero < 10000:
 
-if x1>0 and x2>0 and y1>0 and y2>0:
-    formula=math.sqrt((x2-x1)**2+(y2-y1)**2)
-    print("La distancia ordinaria entre dos puntos de un espacio euclídeo es..",formula)
+    c4= Numero%10
+    c3=int((Numero%100)/10)
+    c2=int((Numero%1000)/100)
+    c1=int((Numero-(Numero%100))/1000)
+
+    print(str(c4)+str(c3)+str(c2)+str(c1)) 
 else:
-    print("El sistema solo admite valores positivos")    
+    print("El sistema solo trabaja con numeros de cuatro cifras")   
