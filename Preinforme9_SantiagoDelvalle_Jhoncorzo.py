@@ -1,12 +1,21 @@
-Numero=int(input("Digite un número de 4 cifras"))  
+print("Ejercicio 3")
 
-if Numero >= 1000 and Numero < 10000:
+n1 = float(input("Digite el valor de la primera nota: "))
+n2 = float(input("Digite el valor de la segunda nota: "))
+n3 = float(input("Digite el valor de la tercera nota: "))
+n4 = float(input("Digite el valor de la cuarta nota: "))
+n5 = float(input("Digite el valor de la quinta nota: "))
 
-    c4= Numero%10
-    c3=int((Numero%100)/10)
-    c2=int((Numero%1000)/100)
-    c1=int((Numero-(Numero%100))/1000)
-
-    print(str(c4)+str(c3)+str(c2)+str(c1)) 
+if (n1 >5) or (n2>5) or (n3>5) or (n4>5) or (n5>5):
+    print("Error al digitar las notas")
 else:
-    print("El sistema solo trabaja con numeros de cuatro cifras")   
+    total = (n1*0.15 + n2*0.2 + n3*0.15 + n4*0.3 + n5*0.2) 
+
+    if total < 2.0:
+        print("No puede habilitar")
+    elif total < 3.0:
+        print("Reprobó")
+    elif total >= 3.0:
+        print("Aprobó")
+    else:
+        print("Felicitaciones por su desempeño académico.")
